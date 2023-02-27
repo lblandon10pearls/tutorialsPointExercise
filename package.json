@@ -4,16 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open --e2e --browser=firefox",
-    "cypress:run": "cypress run --spec 'cypress/e2e/login-tests.cy.js' --env grepTags=@DemoSuite",
-    "cy:homepage": "cypress run --browser chrome --spec 'cypress/integration/homepage.spec.js'",
-    "cy:demo": "cypress run --browser chrome --env grepTags=@DemoSuite",
-    "cy:bs-searchOnly": "browserstack-cypress run --sync --spec 'cypress/integration/search-page-tests.*' --env grepTags=@DemoSuite",
-    "cy:searchOnly": "cypress run --browser chrome  --spec 'cypress/integration/search-page-tests.*' --env grepTags=@DemoSuite",
-    "cy:demo-bs": "browserstack-cypress run --no-wrap --spec 'cypress/e2e/*.cy.js' --env grepTags=@DemoSuite",
-    "cy:daily": "browserstack-cypress run --no-wrap --env grepTags=@DailyCheck",
-    "combine:reports": "jrm reports/automation-report.xml \"build_artifacts/**/*.xml\"",
-    "cy:run": "browserstack-cypress run --spec 'cypress/e2e/*.cy.js' --env grepTags=@DemoSuite"
+    "cy:run_spec": "npx cypress run --spec 'cypress/e2e/aboutPage.cy.js' --headless --record --key a93034a5-3e2d-4b29-b62c-a9f193943f27"
   },
   "author": "",
   "license": "ISC",
