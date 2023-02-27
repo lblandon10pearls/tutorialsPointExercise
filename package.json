@@ -1,0 +1,38 @@
+{
+  "name": "cypress-webpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open --e2e --browser=firefox",
+    "cypress:run": "cypress run --spec 'cypress/e2e/login-tests.cy.js' --env grepTags=@DemoSuite",
+    "cy:homepage": "cypress run --browser chrome --spec 'cypress/integration/homepage.spec.js'",
+    "cy:demo": "cypress run --browser chrome --env grepTags=@DemoSuite",
+    "cy:bs-searchOnly": "browserstack-cypress run --sync --spec 'cypress/integration/search-page-tests.*' --env grepTags=@DemoSuite",
+    "cy:searchOnly": "cypress run --browser chrome  --spec 'cypress/integration/search-page-tests.*' --env grepTags=@DemoSuite",
+    "cy:demo-bs": "browserstack-cypress run --no-wrap --spec 'cypress/e2e/*.cy.js' --env grepTags=@DemoSuite",
+    "cy:daily": "browserstack-cypress run --no-wrap --env grepTags=@DailyCheck",
+    "combine:reports": "jrm reports/automation-report.xml \"build_artifacts/**/*.xml\"",
+    "cy:run": "browserstack-cypress run --spec 'cypress/e2e/*.cy.js' --env grepTags=@DemoSuite"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress-grep": "^3.0.2",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.2.2",
+    "cypress-multi-reporters": "^1.6.1",
+    "eslint-plugin-cypress": "^2.12.1",
+    "junit-report-merger": "^4.0.0",
+    "mocha-junit-reporter": "^2.0.2",
+    "mochawesome-merge": "^4.2.1"
+  },
+  "devDependencies": {
+    "cypress": "^10.6.0",
+    "eslint": "^8.20.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-promise": "^6.0.0"
+  }
+}
