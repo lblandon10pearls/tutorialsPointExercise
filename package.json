@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:run_spec": "npx cypress run --spec 'cypress/e2e/aboutPage.cy.js' --headless --record --key a93034a5-3e2d-4b29-b62c-a9f193943f27"
+    "cy:run_spec": "npx cypress run --spec 'cypress/e2e/aboutPage.cy.js' --headless --record --key a93034a5-3e2d-4b29-b62c-a9f193943f27",
+    "cy:run_browser": "npm run cy:run_spec -- --browser chrome"
   },
   "author": "",
   "license": "ISC",
