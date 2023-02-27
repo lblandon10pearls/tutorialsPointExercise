@@ -10,7 +10,7 @@ describe('Test go to about us', () => {
         navigateTo.goToAboutPage()
     })
     it('Get All Links About Page', () => {
-      //  navigateTo.getHrefLinkAboutPage() 
+        navigateTo.getHrefLinkAboutPage() 
     })
     it ('Get all buttons About page', () =>{
         navigateTo.getListButtonsAboutPage()
